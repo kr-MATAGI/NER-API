@@ -1,0 +1,7 @@
+# IDE
+.idea/
+__pycache__/
+
+# Model
+/model/model.pth
+
