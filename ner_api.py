@@ -8,8 +8,8 @@ from eunjeon import Mecab # Windows
 from transformers import ElectraTokenizer
 from electra_lstm_crf import ELECTRA_POS_LSTM
 
-from tag_def import ETRI_TAG, MECAB_POS_TAG
-from data_def import (
+from definition.tag_def import ETRI_TAG, MECAB_POS_TAG
+from definition.data_def import (
     Res_results, Res_ne,
     Mecab_Item, Tok_Pos
 )
