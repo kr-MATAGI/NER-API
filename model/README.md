@@ -1,1 +1,0 @@
-ELECTRA + LSTM(POS) +CRF (Mecab wordpiece)

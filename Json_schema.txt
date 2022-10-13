@@ -1,0 +1,37 @@
+1. Request
+  {
+     "date": "yyyy-mm-dd_hh:mm:ss.msec",
+     "sentences": [
+      {"id": "str or integer", "text": "str"}
+     ]
+  }
+
+
+date: API에 Request를 위해 json을 생성한 시각 (Format 변경 가능)
+id: Debug를 위해 영문/숫자 혼합 혹은 숫자
+text: 개체명 분석을 수행할 문장
+
+
+----------------------------------
+
+2. Response
+  {
+    "date": "yyyy-mm-dd_hh:mm:ss.msec",
+    "results": [{
+      "id": "str", 
+      "text": "str",
+      "ne": [
+        {"word": "str", "label": "str", "begin": "integer", "end": "integer"}
+      ]
+    }]
+  }
+
+date: 개체명 분석 후 Response json을 생성한 시각 (Format 변경 가능)
+results: Demo로부터 Request받은 문장의 개체명 분석 결과
+id: Request에서 전달 받은 id
+text: Request에서 전달 받은 개체명 분석의 대상 문장
+ne: 한 문장 내에서 개체명 분석 결과
+word: 개체명 (e.g. 김연아)
+label: word에 대한 개체명 분석 결과 (e.g. PS, OG...)
+begin: word의 시작 위치
+end: word의 끝 위치
