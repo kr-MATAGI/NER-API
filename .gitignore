@@ -1,6 +1,7 @@
 # IDE
 .idea/
 __pycache__/
+.DS_Store
 
 # Model
 /model/model.pth
