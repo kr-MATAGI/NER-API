@@ -1,6 +1,12 @@
 # NER-API
 Named Enttiy Recognition API
 
+### Python 패키지 종합 설치
+
+```
+pip install -r requirements.txt
+```
+
 ### Fast API 실행 방법
 
 ```
