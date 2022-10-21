@@ -4,7 +4,6 @@ import copy
 import numpy as np
 
 import torch
-from eunjeon import Mecab # Windows
 from transformers import ElectraTokenizer
 from electra_lstm_crf import ELECTRA_POS_LSTM
 
