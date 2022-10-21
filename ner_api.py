@@ -25,14 +25,14 @@ def make_response_json(model_output_list):
         "date": "",
         "results": []
     }
-    result_json_dict = {
-        "id": "",
-        "text": "",
-        "ne": []
-    }
 
     root_json_dict["date"] = dt.datetime.now().strftime("%Y-%m-%d_%H:%M:%S.%f")
     for data in model_output_list:
+        result_json_dict = {
+            "id": "",
+            "text": "",
+            "ne": []
+        }
         result_json_dict["id"] = data.id
         result_json_dict["text"] = data.text
         for ne_idx, ne_item in enumerate(data.ne_list):

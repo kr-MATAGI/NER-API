@@ -31,9 +31,11 @@ async def root():
 @app.post("/ner")
 async def response_ner(item: Req_Data):
     response_list = []
-    for sent in item.sentences:
+    for sent_idx, sent in enumerate(item.sentences):
         model_outputs = load_ner_api(model, tokenizer, input_sent=sent.text)
         model_outputs.id = sent.id
         response_list.append(model_outputs)
     res_json_str = make_response_json(model_output_list=response_list)
+    print(f"=======================\nRequest: \n{item}")
+    print(f"=======================\nResponse: \n{res_json_str}\n=======================")
     return res_json_str
