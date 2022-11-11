@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from pydantic import BaseModel
 from typing import List
 
@@ -38,4 +38,4 @@ async def response_ner(item: Req_Data):
     res_json_str = make_response_json(model_output_list=response_list)
     print(f"=======================\nRequest: \n{item}")
     print(f"=======================\nResponse: \n{res_json_str}\n=======================")
-    return res_json_str
+    return Response(content=res_json_str, media_type="application/json")
